@@ -326,7 +326,7 @@ int main(int argc, char **argv) {
   die_on_amqp_error(amqp_login(conn, vhost,
                                0,         /* channel_max */
                                10485760,  /* max frame size, 10MB */
-                               30,        /* heartbeat, 30 secs */
+                               0,        /* heartbeat, 30 secs */
                                AMQP_SASL_METHOD_PLAIN,
                                username, password),
         "Logging in");
